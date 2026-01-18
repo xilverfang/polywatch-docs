@@ -138,7 +138,7 @@ See `SECURITY.md` for how Polywatch stores/encrypts credentials and recommended 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/polywatch.git
+git clone https://github.com/xilverfang/polywatch.git
 cd polywatch
 ```
 

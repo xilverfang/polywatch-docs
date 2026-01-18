@@ -9,7 +9,7 @@ Polywatch is a Telegram bot + executor for interacting with Polymarket markets.
 
 - Read the project overview: [README](/docs/readme)
 - Review security + operational guidance: [Security](/docs/security)
-- Set up the Telegram bot + learn commands: [Telegram Bot Setup & Commands](/docs/telegram)
+- Set up the Telegram bot + learn commands: [Polycatch](/docs/telegram)
 
 ## Running the docs locally
 

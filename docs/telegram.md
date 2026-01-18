@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
-title: Telegram Bot Setup & Commands
+title: Polycatch
 ---
 
-Polywatch is a **Telegram bot for monitoring Polymarket activity** and helping you act on signals quickly. This page explains what the bot does, how to get started in Telegram, and what each command is for.
+Polycatch is a **Telegram bot for monitoring Polymarket activity** and helping you act on signals quickly. This page explains what the bot does, how to get started in Telegram, and what each command is for.
 
-## What Polywatch does
+## What Polycatch does
 
 - **Monitoring**: watches Polymarket-related on-chain activity and surfaces notable events (e.g., high-value deposits).
 - **Trading UX**: lets you place trades from Telegram with structured, button-driven flows.
@@ -13,7 +13,9 @@ Polywatch is a **Telegram bot for monitoring Polymarket activity** and helping y
 
 ## Getting started (in Telegram)
 
-1) Open the Polywatch bot chat and run **`/start`**  
+Get started by visiting the bot: [https://t.me/polycatch_bot](https://t.me/polycatch_bot)
+
+1) Open the Polycatch bot chat and run **`/start`**  
 2) Create your encrypted account with **`/setup`**  
 3) Unlock your session with **`/unlock`** (required for anything that uses your credentials)  
 4) Start monitoring with **`/monitor`** (so the bot can surface signals and enable trading dashboards)
@@ -22,7 +24,7 @@ Polywatch is a **Telegram bot for monitoring Polymarket activity** and helping y
 
 ### `/setup` (first-time account creation)
 
-`/setup` creates your Polywatch account and stores your credentials **encrypted at rest**.
+`/setup` creates your Polycatch account and stores your credentials **encrypted at rest**.
 
 You’ll be prompted for:
 
@@ -38,7 +40,7 @@ You’ll be prompted for:
   - **What it’s for**: identifies the account that holds collateral and positions on Polymarket (used for balance/positions).
   - **Tip**: this is your Polymarket “proxy wallet/profile” address (not necessarily the same as your MetaMask EOA).
 
-During setup, Polywatch also **generates Polymarket API credentials** for you (API key/secret/passphrase) based on your signer key. These are needed for authenticated Polymarket API calls (placing orders, listing/canceling orders, etc.).
+During setup, Polycatch also **generates Polymarket API credentials** for you (API key/secret/passphrase) based on your signer key. These are needed for authenticated Polymarket API calls (placing orders, listing/canceling orders, etc.).
 
 ## In-chat setup flow
 
@@ -58,7 +60,7 @@ Many actions (trading, monitoring, balance fetches) require an active session.
 - **`/help`**: prints the command list
 - **`/status`**: shows account info, session status, and **USDC balance**
   - Balance is fetched on-chain from the configured funder address (USDC `balanceOf`)
-- **`/delete`**: deletes your Polywatch account (credentials + history + settings)
+- **`/delete`**: deletes your Polycatch account (credentials + history + settings)
 - **`/cancel`**: cancels the current operation (setup flows, prompts, etc.)
 
 ### Monitoring

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: Polywatch Docs
+title: Polycatch Docs
 ---
 
-Polywatch is a Telegram bot + executor for interacting with Polymarket markets.
+Polycatch is a Telegram bot + executor for interacting with Polymarket markets.
 
 ## Start here
 

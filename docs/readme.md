@@ -3,7 +3,7 @@ title: README
 slug: /readme
 ---
 
-# Polywatch
+# Polycatch
 
 A high-performance Golang bot that detects "insider" trading signals on Polymarket by monitoring high-value USDC.e deposits into Polymarket proxy wallets and automatically copying trades.
 
@@ -44,7 +44,7 @@ A high-performance Golang bot that detects "insider" trading signals on Polymark
 
 ## Security
 
-See `SECURITY.md` for how Polywatch stores/encrypts credentials and recommended operational practices.
+See `SECURITY.md` for how Polycatch stores/encrypts credentials and recommended operational practices.
 
 ## Prerequisites
 
@@ -178,7 +178,7 @@ The command will output your API credentials:
 
 ```
 API Credentials:
-  API Key:    550e8400-e29b-41d4-a716-446655440000
+  API Key:    550e8400-e29b-41d4-a716-
   Secret:     base64EncodedSecretString==
   Passphrase: randomPassphraseString
 ```
@@ -186,7 +186,7 @@ API Credentials:
 4. **Add these to your `.env` file:**
 
 ```env
-BUILDER_API_KEY=550e8400-e29b-41d4-a716-446655440000
+BUILDER_API_KEY=550e8400-e29b-41d4-a716-
 BUILDER_SECRET=base64EncodedSecretString==
 BUILDER_PASSPHRASE=randomPassphraseString
 ```
@@ -251,7 +251,7 @@ make build
 Or manually:
 
 ```bash
-go build -o polywatch ./cmd/polywatch
+go build -o polycatch ./cmd/polycatch
 ```
 
 ### Creating API Credentials
@@ -259,7 +259,7 @@ go build -o polywatch ./cmd/polywatch
 Generate or derive your Polymarket API credentials:
 
 ```bash
-./polywatch --create-api-key
+./polycatch --create-api-key
 ```
 
 This uses L1 authentication to create or retrieve your API credentials. The credentials will be printed to the console - save them to your `.env` file.
@@ -269,14 +269,14 @@ This uses L1 authentication to create or retrieve your API credentials. The cred
 The monitor component listens for high-value deposits and detects insider trades:
 
 ```bash
-./polywatch --monitor
+./polycatch --monitor
 ```
 
 Or if using `make`:
 
 ```bash
 make build
-./polywatch --monitor
+./polycatch --monitor
 ```
 
 **What it does:**
@@ -290,7 +290,7 @@ make build
 The executor component receives trade signals and executes trades:
 
 ```bash
-./polywatch --executor
+./polycatch --executor
 ```
 
 **What it does:**
@@ -304,7 +304,7 @@ The executor component receives trade signals and executes trades:
 Run both monitor and executor in the same process:
 
 ```bash
-./polywatch --monitor --executor
+./polycatch --monitor --executor
 ```
 
 **Note:** When running together, signals are passed via in-process channels (faster than IPC).
@@ -315,12 +315,12 @@ For better control and monitoring, run them separately:
 
 **Terminal 1 (Monitor):**
 ```bash
-./polywatch --monitor
+./polycatch --monitor
 ```
 
 **Terminal 2 (Executor):**
 ```bash
-./polywatch --executor
+./polycatch --executor
 ```
 
 The executor will automatically connect to the monitor via Unix socket.
@@ -468,7 +468,7 @@ Common targets:
 ### Command-Line Flags
 
 ```bash
-./polywatch [flags]
+./polycatch [flags]
 ```
 
 | Flag | Description |
@@ -479,16 +479,16 @@ Common targets:
 
 **Examples:**
 ```bash
-./polywatch --monitor              # Monitor only
-./polywatch --executor             # Executor only (connects via IPC)
-./polywatch --monitor --executor   # Run both together
-./polywatch --create-api-key       # Generate API credentials
+./polycatch --monitor              # Monitor only
+./polycatch --executor             # Executor only (connects via IPC)
+./polycatch --monitor --executor   # Run both together
+./polycatch --create-api-key       # Generate API credentials
 ```
 
 ### Project Structure
 
 ```
-polywatch/
+polycatch/
 ├── cmd/
 │   └── polywatch/        # Main application entry point
 ├── internal/

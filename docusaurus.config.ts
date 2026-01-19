@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Polywatch',
+  title: 'Polycatch',
   tagline: 'Polymarket trading bot + executor',
   favicon: 'img/favicon.ico',
 
@@ -61,9 +61,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Polywatch',
+      title: 'Polycatch',
       logo: {
-        alt: 'Polywatch',
+        alt: 'Polycatch',
         src: 'img/logo.svg',
       },
       items: [
@@ -74,7 +74,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/yourusername/polywatch',
+          href: 'https://github.com/xilverfang/polycatch',
           label: 'GitHub',
           position: 'right',
         },
@@ -97,12 +97,12 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/yourusername/polywatch',
+              href: 'https://github.com/xilverfang/polycatch',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Polywatch. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Polycatch. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
